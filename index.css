@@ -1,0 +1,173 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+h1, h3, h4 {
+  color: #fff;
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+header p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* ===== CONTAINERS ===== */
+.container {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px;
+}
+
+.painel-catraca, .painel-cadastro {
+  background-color: #1e293b;
+  border-radius: 16px;
+  padding: 24px;
+  flex: 1;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.painel-catraca:hover, .painel-cadastro:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+}
+
+/* ===== CATRACA ===== */
+#video {
+  background: #000;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+button.secundario,
+button.secondary {
+  background-color: #475569;
+}
+
+button.secundario:hover,
+button.secondary:hover {
+  background-color: #64748b;
+}
+
+.catraca-bloqueada {
+  background-color: #dc2626;
+  text-align: center;
+  color: white;
+  padding: 6px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ===== CADASTRO ===== */
+.painel-cadastro h3 {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin-bottom: 4px;
+  margin-top: 12px;
+}
+
+input, select {
+  width: 100%;
+  background-color: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.3);
+  outline: none;
+}
+
+select {
+  padding-right: 2.2rem;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M4 6l4 4 4-4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 14px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.info {
+  margin-top: 10px;
+}
+
+#btnCreateUser, #btnAddSamples {
+  margin-top: 16px;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #93c5fd;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 32px;
+  padding-bottom: 12px;
+}

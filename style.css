@@ -235,12 +235,12 @@ button {
   color: #ffffff;
   font-weight: 550;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.2s;
 }
 
 button.principal:hover {
   opacity: 0.9;
-  transform: translateY(-2px); /* leve elevação */
+  transform: translateY(-1px); /* leve elevação */
   box-shadow: 0 4px 12px rgba(1, 29, 90, 0.3); /* brilho */
   background-color: #3872f0aa;
 }
@@ -254,12 +254,12 @@ button.secondary {
   color: #ffffff;
   font-weight: 550;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.2s;
 }
 
 button.secondary:hover {
   opacity: 0.9;
-  transform: translateY(-2px); /* leve elevação */
+  transform: translateY(-1px); /* leve elevação */
   box-shadow: 0 4px 12px rgba(1, 29, 90, 0.3); /* brilho */
   background-color: #1f2937;
 }

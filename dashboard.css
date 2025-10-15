@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --catracabloqueada: #ff1e1e7c;
+  --btnimportant: #2563eb;
+  --background: #1f2937;
+  --painel: #6b7280;
+  --number: #d9d9d9;
+  --texto: #ffffff;
+  --btnaction: #111827;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--background);
+  color: var(--texto);
+}
+
+/* CABEÇALHO */
+header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 0 0 0 20px;
+}
+
+header p {
+  margin-top: 22px;
+  font-size: 18px;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: #6b7280;
+  margin: 0 16px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+  padding: 10px;
+}
+
+main .group {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 16px;
+  padding: 10px;
+}
+
+/* CONTAINER RESUMO */
+.container-resumo {
+  background: var(--painel);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 30, 0.2);
+}
+
+.container-resumo h2 {
+  font-size: 24px;
+  border-bottom: 1px solid var(--texto);
+  padding-bottom: 8px;
+}
+
+.resumo-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resumo-cards .card {
+  background: rgba(255, 250, 250, 0.15);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.resumo-cards .card:hover {
+  transform: scale(1.03);
+}
+
+.resumo-cards .card h3 {
+  margin: 0;
+  font-size: 15px;
+  color: var(--background);
+  font-weight: 600;
+}
+
+.resumo-cards .card p {
+  margin: 0;
+  font-size: 20px;
+  color: var(--texto);
+  font-weight: 600;
+}
+
+/* CONTAINER DASHBOARD */
+.container-dashboard {
+  background: var(--background);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.periodo-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.periodo-select label {
+  font-size: 14px;
+  color: var(--texto);
+}
+
+.periodo-select select {
+  background: var(--painel);
+  color: var(--texto);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+
+/* SEÇÕES DE GRÁFICOS */
+.dashboard-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.dashboard-section {
+  background: var(--painel);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 30, 0.3);
+}
+
+.dashboard-section h3 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* RODAPÉ */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  color: var(--texto);
+  font-size: 14px;
+}

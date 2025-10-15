@@ -1,68 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard | Facial Fair Access</title>
-    <link rel="stylesheet" href="/css/dash.css">
-</head>
-<body>
-     <header> <!-- Cabeçalho com nome do projeto-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/public/css/dashboard.css" />
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <!-- Cabeçalho -->
+    <header>
       <h1>Facial Fair Access <span style="font-weight: 200;"> | </span></h1>
       <p>Protótipo de testes e inclusão</p>
     </header>
     <hr />
+
     <main>
-        <div class="group">
-        <section class = "container-resumo">
-            <h2>Resumo</h2>
-            <div class="resumo-cards">
-                <div class="card">
-                    <h3>Total de Usuários</h3>
-                    <p>350</p>
-                </div>
-                <div class="card">
-                    <h3>Acessos Hoje</h3>
-                    <p>150</p>
-                </div>
-                <div class="card">
-                    <h3>Acessos Semanais</h3>
-                    <p>1,200</p>
-                </div>
-                <div class="card">
-                    <h3>Catracas Ativas</h3>
-                    <p>5</p>
-                </div>
-        </section>
-        <section class="container-dashboard">
-            <h2>Dashboard</h2>
-            <p>Bem-vindo ao painel de controle do Facial Fair Access. Aqui você pode monitorar o status das catracas, gerenciar usuários e visualizar estatísticas de acesso.</p>
-            <div class="dashboard-sections">
-                <div class="dashboard-section">
-                    <h3>Status das Catracas</h3>
-                    <ul>
-                        <li>Catraca 1: <strong>Desbloqueada</strong></li>
-                        <li>Catraca 2: <strong>Bloqueada</strong></li>
-                        <li>Catraca 3: <strong>Desbloqueada</strong></li>
-                    </ul>
-                </div>
-                <div class="dashboard-section">
-                    <h3>Gerenciamento de Usuários</h3>
-                    <p>Aqui você pode adicionar, remover ou editar usuários cadastrados no sistema.</p>
-                    <button>Adicionar Usuário</button>
-                    <button>Remover Usuário</button>
-                </div>
-                <div class="dashboard-section">
-                    <h3>Estatísticas de Acesso</h3>
-                    <p>Número total de acessos hoje: <strong>150</strong></p>
-                    <p>Número total de acessos esta semana: <strong>1,200</strong></p>
-                </div>
+      <div class="group">
+        <!-- CONTAINER RESUMO -->
+        <section class="container-resumo">
+          <h2>Resumo</h2>
+          <div class="resumo-cards">
+            <div class="card">
+              <h3>Total de Usuários</h3>
+              <p id="totalUsuarios">350</p>
             </div>
+            <div class="card">
+              <h3>Acessos</h3>
+              <p id="acessos">150</p>
+            </div>
+            <div class="card">
+              <h3>Falhas de Reconhecimento</h3>
+              <p id="falhas">25</p>
+            </div>
+            <div class="card">
+              <h3>Diversidade Média Detectada</h3>
+              <p id="diversidade">87%</p>
+            </div>
+          </div>
         </section>
-        </div>
+
+        <!-- CONTAINER DASHBOARD -->
+        <section class="container-dashboard">
+          <div class="dashboard-header">
+            <h2>Dashboard Inclusivo</h2>
+
+            <!-- 🔹 SELETOR DE PERÍODO -->
+            <div class="periodo-select">
+              <label for="periodo">Período:</label>
+              <select id="periodo">
+                <option value="hoje">Hoje</option>
+                <option value="semana" selected>Semana</option>
+                <option value="mes">Mês</option>
+              </select>
+            </div>
+          </div>
+
+          <p>
+            Bem-vindo ao painel do <strong>Facial Fair Access</strong>. Aqui você pode visualizar métricas de desempenho e inclusão do sistema de reconhecimento facial.
+          </p>
+
+          <div class="dashboard-sections">
+            <!-- Gráfico 1 -->
+            <div class="dashboard-section">
+              <h3>Falhas por Grupo Étnico/Social</h3>
+              <canvas id="falhasChart"></canvas>
+            </div>
+
+            <!-- Gráfico 2 -->
+            <div class="dashboard-section">
+              <h3>Distribuição de Gênero</h3>
+              <canvas id="generoChart"></canvas>
+            </div>
+
+            <!-- Gráfico 3 -->
+            <div class="dashboard-section">
+              <h3>Taxa de Reconhecimento Bem-sucedido</h3>
+              <canvas id="taxaChart"></canvas>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
+
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Facial Fair Access. Todos os direitos reservados.</p>
+      <p>&copy; Facial Fair Access. Todos os direitos reservados.</p>
     </footer>
-</body>
+
+    <!-- Script -->
+    <script src="/public/js/dashboard.js"></script>
+  </body>
 </html>

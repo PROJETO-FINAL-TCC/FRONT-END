@@ -19,11 +19,11 @@ new Chart(barCtx, {
         scales: {
             y: {
                 beginAtZero: true,
-                ticks: { color: "#d1d5db" },
+                ticks: { color: "#111827" },
                 grid: { color: "#374151" },
             },
             x: {
-                ticks: { color: "#d1d5db" },
+                ticks: { color: "#111827" },
                 grid: { display: false },
             },
         },
@@ -47,8 +47,8 @@ new Chart(pieCtx, {
     options: {
         plugins: {
             legend: {
-                position: "bottom",
-                labels: { color: "#d1d5db" },
+                position: "right",
+                labels: { color: "#111827" , boxWidth: 20, padding: 15 },
             },
         },
     },
@@ -63,7 +63,7 @@ new Chart(lineCtx, {
         datasets: [{
             label: "Taxa de sucesso (%)",
             data: [89, 91, 93, 95],
-            borderColor: "#d1d5db",
+            borderColor: "#2563eb",
             backgroundColor: "rgba(156, 163, 175, 0.3)",
             fill: true,
             tension: 0.4,
@@ -74,11 +74,11 @@ new Chart(lineCtx, {
         scales: {
             y: {
                 beginAtZero: false,
-                ticks: { color: "#d1d5db" },
+                ticks: { color: "#111827" },
                 grid: { color: "#374151" },
             },
             x: {
-                ticks: { color: "#d1d5db" },
+                ticks: { color: "#111827" },
                 grid: { display: false },
             },
         },

@@ -10,6 +10,16 @@
   --texto: #ffffff;
   --btnaction: #111827;
 }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--background);
+  color: var(--texto);
+}
 
 header {
   padding: 10px;
@@ -38,18 +48,25 @@ hr {
 }
 
 main {
-  margin: 20px;
-  box-sizing: border-box;
-  justify-content: center;
-  max-height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
+  display: grid;
+  gap: 16px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 body {
+  margin: 0;
   font-family: "Poppins", sans-serif;
+  background: var(--background);
+  color: var(--texto);
 }
 
 #resumo-cards {
   width: 25%;
+  padding: 30px;
   background-color: var(--painel);
 }
 
@@ -97,8 +114,10 @@ body {
 }
 
 #dashboard {
-  width: 80%;
-  background-color: var(--painel);
+  width: 75%;
+  margin: 0 auto; /* centraliza todo o painel */
+  background: var(--painel);
+  padding: 30px;
 }
 
 #dashboard h2 {
@@ -127,6 +146,7 @@ body {
   width: 1000px;
   height: 110px;
   margin-top: 10px;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -161,19 +181,80 @@ body {
 
 /* Graficos */
 
+#grafico-1 {
+  margin-top: 40px;
+  display: flex; /* muda de grid para flex */
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: flex-start; /* alinha pelo topo */
+  gap: 10px; /* espaço entre os dois gráficos */
+  width: 100%;
+  flex-wrap: wrap; /* permite quebrar linha em telas pequenas */
+}
+
 #grafico-1 #grafico-container {
-    height: 45%;
-    width: 650px;
-    background-color: var(--texto);
-    padding: 20px;
-    border-radius: 16px;
-    box-sizing: border-box;
-    color: var(--btnaction);
+  height: 290px;
+  width: 500px;
+  align-items: center;
+  background-color: var(--texto);
+  border-radius: 16px;
+  box-sizing: border-box;
+  color: var(--btnaction);
+}
+#grafico-container h3 {
+  font-size: 17px;
+  font-weight: 520;
+  margin-bottom: 20px;
+}
+
+#grafico-2 {
+  height: 290px;
+  width: 500px;
+  background-color: var(--texto);
+  border-radius: 16px;
+  box-sizing: border-box;
+  color: var(--btnaction);
+  display: flex; /* coloca texto e gráfico lado a lado */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: space-between; /* separa os dois elementos */
+  gap: 20px; /* espaço entre o texto e o gráfico */
+}
+
+#grafico-2 h3 {
+  margin-top: -58px;
+  font-size: 17px;
+  font-weight: 520;
+}
+
+#grafico-2 ul {
+  margin-top: 40px;
+}
+
+#grafico-2 ul li {
+  color: var(--btnaction);
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+#evolucao {
+  align-items: center;
+  background: var(--texto);
+  height: 140px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#evolucao h3 {
+  color: var(--btnaction);
+  font-size: 16px;
 }
 
 
-
-
+footer {
+  text-align: center;
+  color: var(--texto);
+  font-size: 12px;
+}
 
 /* Sombras suaves e bordas arredondadas */
 

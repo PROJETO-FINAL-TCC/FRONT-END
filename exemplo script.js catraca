@@ -1,0 +1,44 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const btnCreateUser = document.getElementById('btnCreateUser');
+
+  btnCreateUser.addEventListener('click', async () => {
+    // Pega os valores dos inputs
+    const dados = {
+      nome: document.getElementById('uNome').value.trim(),
+      documento: document.getElementById('uDoc').value.trim(),
+      genero: document.getElementById('uGender').value,
+      etnia: document.getElementById('uEth').value,
+      faixa_etaria: document.getElementById('uAge').value
+    };
+
+    // Validação simples
+    if (!dados.nome || !dados.documento) {
+      alert('Por favor, preencha o nome e o documento.');
+      return;
+    }
+
+    try {
+      const resposta = await fetch('/cadastro_catraca', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dados)
+      });
+
+      if (resposta.ok) {
+        const resultado = await resposta.json();
+        alert(resultado.mensagem || 'Usuário cadastrado com sucesso!');
+        // opcional: limpar campos
+        document.getElementById('uNome').value = '';
+        document.getElementById('uDoc').value = '';
+      } else {
+        const erro = await resposta.json();
+        alert(erro.mensagem || 'Erro ao cadastrar usuário.');
+      }
+    } catch (erro) {
+      console.error('Erro:', erro);
+      alert('Falha ao se comunicar com o servidor.');
+    }
+  });
+});

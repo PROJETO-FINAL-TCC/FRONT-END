@@ -23,8 +23,8 @@ body {
 }
 
 header {
-  padding: 10px;
-  margin: 0;
+  padding: 5px;
+  margin: auto;
   display: flex;
   gap: 20px;
   align-items: center;

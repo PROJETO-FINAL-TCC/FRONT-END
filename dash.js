@@ -13,7 +13,7 @@ new Chart(barCtx, {
             data: [98, 88, 90, 92, 89],
             backgroundColor: ["#d1d5db", "#9ca3af", "#6b7280", "#4b5563", "#374151"],
             borderRadius: 8,
-        }, ],
+        },],
     },
     options: {
         scales: {
@@ -42,13 +42,13 @@ new Chart(pieCtx, {
         datasets: [{
             data: [330, 120],
             backgroundColor: ["#6b7280", "#9ca3af"],
-        }, ],
+        },],
     },
     options: {
         plugins: {
             legend: {
                 position: "right",
-                labels: { color: "#111827" , boxWidth: 20, padding: 15 },
+                labels: { color: "#111827", boxWidth: 20, padding: 15 },
             },
         },
     },
@@ -68,9 +68,11 @@ new Chart(lineCtx, {
             fill: true,
             tension: 0.4,
             pointRadius: 4,
-        }, ],
+        },],
     },
     options: {
+        responsive: true,
+        maintainAspectRatio: false, // <-- importante
         scales: {
             y: {
                 beginAtZero: false,
